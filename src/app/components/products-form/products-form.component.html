@@ -1,1 +1,33 @@
-<p>products-form works!</p>
+<h1>Product</h1>
+
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Name</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="name" placeholder="Nombre del producto" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Description</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="description" placeholder="Descripción" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Stock</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="stock" placeholder="Cantidad" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Price</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="price" placeholder="Precio" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 16, offset: 8 }">
+      <button nz-button nzType="primary">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
